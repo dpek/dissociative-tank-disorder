@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour {
 			float offset = ((stages.Count-1) / 2.0f) - i;
 			offset *= width;
 
-			float x = Screen.width/2 - width/2 + offset;
+			float x = Screen.width/2 - width/2 - offset;
 			float y = Screen.height - height*2;
 
 			if(GUI.Button( new Rect(x, y, width, height), stage )) {
