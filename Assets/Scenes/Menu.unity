@@ -107,6 +107,8 @@ MonoBehaviour:
   - stage03
   - stage04
   - stage05
+  width: 120
+  height: 50
 --- !u!4 &468998036
 Transform:
   m_ObjectHideFlags: 0
