@@ -10,6 +10,7 @@ public class CameraShake : MonoBehaviour {
 	public float autoTime = 2;
 
 	public float speed = 0.1f;
+	private float dist = 0.4f;
 
 	void Start () {
 		targetPos = transform.localPosition;
@@ -29,9 +30,8 @@ public class CameraShake : MonoBehaviour {
 			yield return new WaitForEndOfFrame();
 			if(spentTime / frequency > changeTimes) {
 				changeTimes++;
-				Vector2 pos = Random.insideUnitCircle;
-				targetPos.x = pos.x;
-				targetPos.y = pos.y;
+				targetPos.x = Random.Range(-dist, dist);
+				targetPos.y = Random.Range(-dist, dist);
 				targetPos.z = transform.localPosition.z;
 			}
 			spentTime += Time.deltaTime;
