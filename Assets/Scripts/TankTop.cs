@@ -14,7 +14,6 @@ public class TankTop : MonoBehaviour {
 	Color previous;
 	// Use this for initialization
 	void Start () {
-		previous = this.gameObject.GetComponent<SpriteRenderer>().color;
 		StartCoroutine (WaitForGame());
 		orange = new Color(1.0f,1.0f,0f);
 		fireTime = 3;
@@ -63,6 +62,7 @@ public class TankTop : MonoBehaviour {
 
 	}
 	IEnumerator ShotsFired(float time) {
+
 		this.gameObject.transform.GetComponent<SpriteRenderer>().color = previous;
 		yield return new WaitForSeconds(time);
 		this.gameObject.transform.GetComponent<SpriteRenderer>().color = orange;
@@ -71,8 +71,9 @@ public class TankTop : MonoBehaviour {
 	}
 	IEnumerator WaitForGame(){
 		CanFire = false;
-		this.gameObject.transform.GetComponent<SpriteRenderer>().color = previous;
 		yield return new WaitForSeconds(5);
+		previous = this.gameObject.GetComponent<SpriteRenderer>().color;
+
 		this.gameObject.transform.GetComponent<SpriteRenderer>().color = orange;
 		CanFire = true;
 	

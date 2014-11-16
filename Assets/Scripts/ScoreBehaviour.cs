@@ -78,14 +78,14 @@ public class ScoreBehaviour : MonoBehaviour {
 		State.round++;
 		if (State.round > 5) {
 			State.round = 1;
-			State.team1RoundScore = 0;
-			State.team2RoundScore = 0;
 
 			str = "GAME END";
 			str += "\nSCORE: " + State.team1RoundScore;
 			str += " - " + State.team2RoundScore;
 			go.GetComponent<TextMesh>().text = str;
-			
+			State.team1RoundScore = 0;
+			State.team2RoundScore = 0;
+
 			yield return new WaitForSeconds(5f);
 
 			Application.LoadLevel ("Menu");
