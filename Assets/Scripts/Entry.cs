@@ -85,21 +85,6 @@ public class Entry : MonoBehaviour
 			AudioSource.PlayClipAtPoint(clip1Sec, Vector3.zero);
 			played1Sec = true;
 		}
-
-		GameObject go = new GameObject("GAME END");
-		string str = "GAME END\n";
-		if(State.team1Score > State.team2Score) {
-			str += "TEAM 1 WINS";
-		}
-		else if (State.team2Score > State.team1Score) {
-			str += "TEAM 2 WINS";
-		} else {
-			str += "TIED";
-		}
-		go.AddComponent<TextMesh>().text = str;
-		go.GetComponent<TextMesh>().alignment = TextAlignment.Center;
-		go.GetComponent<TextMesh>().fontSize = 200;
-		go.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 	}
 
 	public IEnumerator DoIntro(Mode mode, int round)

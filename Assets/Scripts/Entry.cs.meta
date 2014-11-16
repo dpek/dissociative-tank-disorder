@@ -3,6 +3,7 @@ guid: 30853ef390aabe545949f4be4bd51384
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
+  - font: {fileID: 12800000, guid: dcab03b99a1db4c3a9b44e980f48e6d6, type: 3}
   - clipDeathmatch: {fileID: 8300000, guid: 84031e916983c4941a4fbae7aacacb53, type: 3}
   - clipSteamroll: {fileID: 8300000, guid: 034f6736958a158409f976336e2b237e, type: 3}
   - clipPanzer1: {fileID: 8300000, guid: 6d54bdb0a56068d42a9ea92e104db74b, type: 3}
