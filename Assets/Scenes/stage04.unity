@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 143956838}
   m_GameObject: {fileID: 2743320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: -10, z: 0}
+  m_LocalPosition: {x: 10, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 129751042}
@@ -122,6 +122,7 @@ MonoBehaviour:
   xInputName: P4X
   yInputName: P4Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &2743323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,9 +191,10 @@ GameObject:
   - 33: {fileID: 11613981}
   - 23: {fileID: 11613980}
   - 61: {fileID: 11613979}
+  - 114: {fileID: 11613982}
   m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,8 +206,8 @@ Transform:
   m_PrefabInternal: {fileID: 1657348994}
   m_GameObject: {fileID: 11613977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 26, z: 0}
-  m_LocalScale: {x: 52, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: 14.5, z: 0}
+  m_LocalScale: {x: 28, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1928725969}
   m_RootOrder: 0
@@ -218,7 +220,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 11613977}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &11613980
@@ -250,6 +252,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1657348994}
   m_GameObject: {fileID: 11613977}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11613982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11613977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &53446341
 Prefab:
   m_ObjectHideFlags: 0
@@ -259,11 +272,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.0554991
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.40298939
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -289,6 +302,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
   m_RootGameObject: {fileID: 1818115495}
@@ -303,11 +336,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.0554991
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.5970106
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -332,6 +365,26 @@ Prefab:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
@@ -416,11 +469,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -496,7 +549,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26
+      value: 14.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -528,11 +581,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalScale.y
-      value: 56
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalScale.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
@@ -548,11 +609,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.94450092
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.5970106
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -577,6 +638,26 @@ Prefab:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
@@ -741,7 +822,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 28
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -949,9 +1030,10 @@ GameObject:
   - 33: {fileID: 913860841}
   - 23: {fileID: 913860840}
   - 61: {fileID: 913860839}
-  m_Layer: 0
+  - 114: {fileID: 913860843}
+  m_Layer: 8
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,7 +1047,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 913860838}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &913860840
@@ -1004,11 +1086,22 @@ Transform:
   m_PrefabInternal: {fileID: 298585755}
   m_GameObject: {fileID: 913860838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.94450092, y: -10.5970106, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 5, y: -5, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1648264628}
   m_RootOrder: 3
+--- !u!114 &913860843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913860838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &942757541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,9 +1113,10 @@ GameObject:
   - 33: {fileID: 942757544}
   - 23: {fileID: 942757543}
   - 61: {fileID: 942757542}
-  m_Layer: 0
+  - 114: {fileID: 942757546}
+  m_Layer: 8
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1036,7 +1130,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 942757541}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &942757543
@@ -1075,11 +1169,22 @@ Transform:
   m_PrefabInternal: {fileID: 79101917}
   m_GameObject: {fileID: 942757541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.0554991, y: -10.5970106, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: -5, y: -5, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1648264628}
   m_RootOrder: 2
+--- !u!114 &942757546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942757541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1044626066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1389,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175948736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 26, z: 10}
+  m_LocalPosition: {x: 4, y: 14, z: 10}
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 581988589}
@@ -1300,9 +1405,10 @@ GameObject:
   - 33: {fileID: 1194397799}
   - 23: {fileID: 1194397798}
   - 61: {fileID: 1194397797}
-  m_Layer: 0
+  - 114: {fileID: 1194397801}
+  m_Layer: 8
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1422,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1194397796}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &1194397798
@@ -1355,11 +1461,22 @@ Transform:
   m_PrefabInternal: {fileID: 1743978902}
   m_GameObject: {fileID: 1194397796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.94450092, y: 9.40298939, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1648264628}
   m_RootOrder: 1
+--- !u!114 &1194397801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194397796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209868640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,7 +1504,7 @@ Transform:
   m_PrefabInternal: {fileID: 1356256180}
   m_GameObject: {fileID: 1209868640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 10, z: 0}
+  m_LocalPosition: {x: 10, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 589487032}
@@ -1408,6 +1525,7 @@ MonoBehaviour:
   xInputName: P3X
   yInputName: P3Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &1209868643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1476,9 +1594,10 @@ GameObject:
   - 33: {fileID: 1228963657}
   - 23: {fileID: 1228963656}
   - 61: {fileID: 1228963655}
+  - 114: {fileID: 1228963658}
   m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1490,8 +1609,8 @@ Transform:
   m_PrefabInternal: {fileID: 180569698}
   m_GameObject: {fileID: 1228963653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 56, z: 1}
+  m_LocalPosition: {x: 14.5, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 28, z: 1}
   m_Children: []
   m_Father: {fileID: 1928725969}
   m_RootOrder: 3
@@ -1504,7 +1623,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1228963653}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &1228963656
@@ -1536,6 +1655,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 180569698}
   m_GameObject: {fileID: 1228963653}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1228963658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228963653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1256654238
 Prefab:
   m_ObjectHideFlags: 0
@@ -1545,11 +1675,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1625,11 +1755,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1707,9 +1837,10 @@ GameObject:
   - 33: {fileID: 1550442950}
   - 23: {fileID: 1550442949}
   - 61: {fileID: 1550442948}
+  - 114: {fileID: 1550442951}
   m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1721,8 +1852,8 @@ Transform:
   m_PrefabInternal: {fileID: 1637862739}
   m_GameObject: {fileID: 1550442946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 56, z: 1}
+  m_LocalPosition: {x: -14.5, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 28, z: 1}
   m_Children: []
   m_Father: {fileID: 1928725969}
   m_RootOrder: 2
@@ -1735,7 +1866,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1550442946}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &1550442949
@@ -1767,6 +1898,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1637862739}
   m_GameObject: {fileID: 1550442946}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1550442951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1550442946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1637862739
 Prefab:
   m_ObjectHideFlags: 0
@@ -1776,7 +1918,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -26
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1808,11 +1950,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalScale.y
-      value: 56
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalScale.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
@@ -1863,7 +2013,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 14.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1895,7 +2045,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalScale.x
-      value: 52
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
@@ -1937,6 +2095,7 @@ MonoBehaviour:
   xInputName: P2X
   yInputName: P2Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &1719986193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2001,7 +2160,7 @@ Transform:
   m_PrefabInternal: {fileID: 1256654238}
   m_GameObject: {fileID: 1719986191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: -10, z: 0}
+  m_LocalPosition: {x: -10, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1098311489}
@@ -2016,11 +2175,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.94450092
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.40298939
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2046,6 +2205,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
   m_RootGameObject: {fileID: 1194397796}
@@ -2060,11 +2239,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2168,7 +2347,7 @@ Transform:
   m_GameObject: {fileID: 1768631737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2190,9 +2369,10 @@ GameObject:
   - 33: {fileID: 1818115498}
   - 23: {fileID: 1818115497}
   - 61: {fileID: 1818115496}
-  m_Layer: 0
+  - 114: {fileID: 1818115500}
+  m_Layer: 8
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2206,7 +2386,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1818115495}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &1818115497
@@ -2245,11 +2425,22 @@ Transform:
   m_PrefabInternal: {fileID: 53446341}
   m_GameObject: {fileID: 1818115495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.0554991, y: 9.40298939, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: -5, y: 5, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1648264628}
   m_RootOrder: 0
+--- !u!114 &1818115500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818115495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1832161677
 Prefab:
   m_ObjectHideFlags: 0
@@ -2263,7 +2454,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -26
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2295,7 +2486,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
       propertyPath: m_LocalScale.x
-      value: 52
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339e86f8b0f434a619f30043db3864f7, type: 2}
@@ -2360,7 +2559,7 @@ Transform:
   m_PrefabInternal: {fileID: 1750984989}
   m_GameObject: {fileID: 1963124381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 10, z: 0}
+  m_LocalPosition: {x: -10, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 881310883}
@@ -2381,6 +2580,7 @@ MonoBehaviour:
   xInputName: P1X
   yInputName: P1Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &1963124384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2462,7 +2662,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038846863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 26, z: 10}
+  m_LocalPosition: {x: -4, y: 14, z: 10}
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 581988589}
@@ -2550,9 +2750,10 @@ GameObject:
   - 33: {fileID: 2102667810}
   - 23: {fileID: 2102667809}
   - 61: {fileID: 2102667808}
+  - 114: {fileID: 2102667812}
   m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2566,7 +2767,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2102667807}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!23 &2102667809
@@ -2605,8 +2806,19 @@ Transform:
   m_PrefabInternal: {fileID: 1832161677}
   m_GameObject: {fileID: 2102667807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -26, z: 0}
-  m_LocalScale: {x: 52, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: -14.5, z: 0}
+  m_LocalScale: {x: 28, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1928725969}
   m_RootOrder: 1
+--- !u!114 &2102667812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102667807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0dc32dcabc4d39bb2a2d8599238b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
