@@ -20,7 +20,8 @@ public class TankTop : MonoBehaviour {
 		fireTime = 3;
 
 		Vector3 scale = transform.localScale;
-		scale.y *= 2;
+		scale.y *= 1.50f;
+		scale.x *= .65f;
 		transform.localScale = scale;
 	}
 
@@ -62,7 +63,10 @@ public class TankTop : MonoBehaviour {
 
 	}
 	IEnumerator ShotsFired(float time) {
+		this.gameObject.transform.GetComponent<SpriteRenderer>().color = previous;
 		yield return new WaitForSeconds(time);
+		this.gameObject.transform.GetComponent<SpriteRenderer>().color = orange;
+
 		CanFire = true;
 	}
 	IEnumerator WaitForGame(){
