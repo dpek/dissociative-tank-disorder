@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Bullets : MonoBehaviour {
 
+	public AudioClip explode;
 	public Team source;
 
 	// Use this for initialization
@@ -23,8 +24,8 @@ public class Bullets : MonoBehaviour {
 					State.team2Score++;
 			}
 			other.GetComponent<Tank> ().Respawn (5);
-
 			GameObject.Destroy (this.gameObject);
+			AudioSource.PlayClipAtPoint(explode, Vector3.zero);
 		} else if (other.gameObject.tag == "Tank3" || other.gameObject.tag == "Tank4") {
 			if (source == Team.TEAM2) {
 				State.team2Score--;
@@ -32,8 +33,8 @@ public class Bullets : MonoBehaviour {
 				State.team1Score++;
 			}
 			other.GetComponent<Tank> ().Respawn (5);
-
 			GameObject.Destroy (this.gameObject);
+			AudioSource.PlayClipAtPoint(explode, Vector3.zero);
 		} else if (other.gameObject.tag == "Bullet") {
 			GameObject.Destroy (other.gameObject);
 		} else if (other.GetComponent<SpeedBoosts> () == null && other.gameObject.tag != "Lava") {
