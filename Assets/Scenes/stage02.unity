@@ -226,7 +226,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team1Text: {fileID: 1870095844}
   team2Text: {fileID: 1037135333}
-  clip: {fileID: 8300000, guid: 68461646de6944c9faaa1ee01c1f038a, type: 3}
+  good: {fileID: 8300000, guid: 68461646de6944c9faaa1ee01c1f038a, type: 3}
+  bad: {fileID: 8300000, guid: 1c0a92631562a8f49a4d81bbe3076544, type: 3}
 --- !u!81 &143071579
 AudioListener:
   m_ObjectHideFlags: 0

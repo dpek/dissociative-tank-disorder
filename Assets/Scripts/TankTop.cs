@@ -32,7 +32,7 @@ public class TankTop : MonoBehaviour {
 		
 	void Fire() {
 		if (CanFire) {
-			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *.60f, Quaternion.Euler(0,0,0));
+			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *.75f, Quaternion.Euler(0,0,0));
 			bullet.rigidbody2D.velocity = transform.up * 10;
 			if(this.gameObject.transform.parent.gameObject.tag == "Tank1" || this.gameObject.transform.parent.gameObject.tag == "Tank2") {
 				bullet.gameObject.GetComponent<Bullets>().source = Team.TEAM1; 
