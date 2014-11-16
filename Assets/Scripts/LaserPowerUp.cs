@@ -5,7 +5,7 @@ public class LaserPowerUp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		StartCoroutine(Respawn());
 	}
 	
 	// Update is called once per frame

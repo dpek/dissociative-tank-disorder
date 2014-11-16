@@ -10,11 +10,13 @@ public class TankTop : MonoBehaviour {
 	public float fireTime;
 	float bulletSpeed = 12;
 	bool CanFire;
-	
+	Color orange;
+	Color previous;
 	// Use this for initialization
 	void Start () {
+		previous = this.gameObject.GetComponent<SpriteRenderer>().color;
 		StartCoroutine (WaitForGame());
-
+		orange = new Color(1.0f,1.0f,0f);
 		fireTime = 3;
 
 		Vector3 scale = transform.localScale;
@@ -37,7 +39,7 @@ public class TankTop : MonoBehaviour {
 	}
 		
 	void Fire(float time) {
-		if (CanFire && this.gameObject.transform.parent.renderer.enabled ) {
+		if (CanFire && this.gameObject.transform.parent.renderer.enabled) {
 			AudioSource.PlayClipAtPoint(shootSound, Vector3.zero);
 			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *1.25f, Quaternion.Euler(0,0,0));
 			bullet.rigidbody2D.velocity = transform.up * bulletSpeed;
@@ -65,7 +67,9 @@ public class TankTop : MonoBehaviour {
 	}
 	IEnumerator WaitForGame(){
 		CanFire = false;
+		this.gameObject.transform.GetComponent<SpriteRenderer>().color = previous;
 		yield return new WaitForSeconds(5);
+		this.gameObject.transform.GetComponent<SpriteRenderer>().color = orange;
 		CanFire = true;
 	
 	}
