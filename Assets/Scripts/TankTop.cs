@@ -51,7 +51,7 @@ public class TankTop : MonoBehaviour {
 	}
 	private IEnumerator laserShot(float time){
 		fireTime = 0;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (10);
 		fireTime = 3;
 
 	}

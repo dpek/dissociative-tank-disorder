@@ -22,7 +22,7 @@ public class LaserPowerUp : MonoBehaviour {
 	IEnumerator Respawn(){
 		this.gameObject.collider2D.enabled  = (false);
 		this.gameObject.renderer.enabled = (false);
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (20);
 		this.gameObject.collider2D.enabled  = (true);
 		this.gameObject.renderer.enabled = (true);
 	
