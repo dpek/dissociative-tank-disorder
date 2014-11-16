@@ -107,7 +107,7 @@ public class ScoreBehaviour : MonoBehaviour {
 		} else if (team == Team.TEAM2) {
 			teamText = team2Text;
 			oldTeam2Score = score;
-			team1TextCoroutines.UpdateScore(teamText, originalTeam2Scale, score);
+			team2TextCoroutines.UpdateScore(teamText, originalTeam2Scale, score);
 		}
 	}
 }
