@@ -15,7 +15,7 @@ public class SpeedBoosts : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D Player){
 		if(Player.tag.Contains("Tank")){
-			Player.BroadcastMessage("CallPowerUp",1);
+			Player.GetComponent<Tank>().BoostSpeed();
 		}
 	}
 }

@@ -22,18 +22,23 @@ public class Bullets : MonoBehaviour {
 			} else {
 				State.team2Score++;
 			}
+			other.GetComponent<Tank>().Respawn(5);
+
+			GameObject.Destroy(this.gameObject);
 		} else if(other.gameObject.tag == "Tank3" || other.gameObject.tag == "Tank4") {
 			if(source == Team.TEAM2){
 				State.team2Score--;
 			} else {
 				State.team1Score++;
 			}
+			other.GetComponent<Tank>().Respawn(5);
+
+			GameObject.Destroy(this.gameObject);
 
 		} else if(other.gameObject.tag == "Bullet"){
 			GameObject.Destroy (other.gameObject);
 		}
 		
-		GameObject.Destroy(this.gameObject);
 
 	}
 }
