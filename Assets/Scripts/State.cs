@@ -8,6 +8,7 @@ public class State : MonoBehaviour {
 	public static float elapsedTime = 0;
 	public static float roundTime = 0;
 	public static int round = 1;
+	public static int Stage = 0;
 	
 	public static void reset(float roundTime) {
 		team1Score = 0;

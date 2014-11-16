@@ -65,15 +65,18 @@ public class ScoreBehaviour : MonoBehaviour {
 
 		yield return new WaitForSeconds(2f);
 		State.round++;
-		if (State.round > 10) {
+		if (State.round > 5) {
 			State.round = 1;
-			Application.LoadLevel("Menu");
+			Application.LoadLevel ("Menu");
 		} else {
-			int number = Random.Range (1, 5);
-			Application.LoadLevel("Stage0" + number);
+			State.Stage++;
+			if (State.Stage > 5) {
+				State.Stage = 1;			
+			}
+			Application.LoadLevel ("Stage0" + State.Stage);
 		}
 	}
-
+	
 	void UpdateScore(Team team, int score, bool goodChange) {
 		StopAllCoroutines();
 

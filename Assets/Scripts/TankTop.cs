@@ -13,8 +13,9 @@ public class TankTop : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		StartCoroutine (WaitForGame());
+
 		fireTime = 3;
-		CanFire = true;
 	}
 
 	// Update is called once per frame
@@ -57,6 +58,12 @@ public class TankTop : MonoBehaviour {
 	IEnumerator ShotsFired(float time) {
 		yield return new WaitForSeconds(time);
 		CanFire = true;
+	}
+	IEnumerator WaitForGame(){
+		CanFire = false;
+		yield return new WaitForSeconds(5);
+		CanFire = true;
+	
 	}
 
 }

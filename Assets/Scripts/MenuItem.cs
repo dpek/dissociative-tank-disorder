@@ -3,10 +3,11 @@ using System.Collections;
 
 public class MenuItem : MonoBehaviour {
 
-	public string level;
+	public int level;
 
 	void OnMouseDown()
 	{
-		Application.LoadLevel(level);
+		Application.LoadLevel("Stage0"+level);
+		State.Stage = level;
 	}
 }
