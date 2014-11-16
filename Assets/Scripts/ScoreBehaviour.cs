@@ -5,7 +5,8 @@ public class ScoreBehaviour : MonoBehaviour {
 
 	public GameObject team1Text;
 	public GameObject team2Text;
-	public AudioClip clip;
+	public AudioClip good;
+	public AudioClip bad;
 
 	int oldTeam1Score = 0;
 	int oldTeam2Score = 0;
@@ -22,17 +23,21 @@ public class ScoreBehaviour : MonoBehaviour {
 
 	void Update () {
 		if (State.team1Score != oldTeam1Score) {
-			UpdateScore (Team.TEAM1, State.team1Score);
+			UpdateScore(Team.TEAM1, State.team1Score, State.team1Score > oldTeam1Score);
 		}
 		if (State.team2Score != oldTeam2Score) {
-			UpdateScore (Team.TEAM2, State.team2Score);
+			UpdateScore(Team.TEAM2, State.team2Score, State.team2Score > oldTeam2Score);
 		}
 	}
 
-	void UpdateScore(Team team, int score) {
+	void UpdateScore(Team team, int score, bool goodChange) {
 		StopAllCoroutines();
 
-		AudioSource.PlayClipAtPoint(clip, Vector3.zero);
+		if (goodChange) {
+			AudioSource.PlayClipAtPoint(good, Vector3.zero);
+		} else {
+			AudioSource.PlayClipAtPoint(bad, Vector3.zero);
+		}
 
 		GameObject teamText = null;
 		if (team == Team.TEAM1) {
