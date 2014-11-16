@@ -26,8 +26,6 @@ public class ScoreBehaviour : MonoBehaviour {
 	}
 
 	void Update () {
-		if(Input.GetKeyDown( KeyCode.A)) { State.team1Score++;}
-
 		if (State.team1Score != oldTeam1Score) {
 			UpdateScore (Team.TEAM1, State.team1Score);
 		}
@@ -41,7 +39,6 @@ public class ScoreBehaviour : MonoBehaviour {
 
 		AudioSource.PlayClipAtPoint(clip, Vector3.zero);
 
-		int oldScore = 0;
 		GameObject teamText = null;
 		if (team == Team.TEAM1) {
 			teamText = team1Text;
