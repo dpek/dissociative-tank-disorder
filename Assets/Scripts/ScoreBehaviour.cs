@@ -10,6 +10,9 @@ public class ScoreBehaviour : MonoBehaviour {
 	private float roundTime = 65;
 	public Entry entry;
 	public Entry.Mode mode;
+	
+	public TextCoroutine team1TextCoroutines;
+	public TextCoroutine team2TextCoroutines;
 
 	bool ending = false;
 
@@ -25,6 +28,9 @@ public class ScoreBehaviour : MonoBehaviour {
 		originalTeam1Scale = team1Text.transform.localScale;
 		originalTeam2Scale = team2Text.transform.localScale;
 		StartCoroutine(entry.DoIntro (mode, State.round));
+		
+		team1TextCoroutines = new GameObject().AddComponent<TextCoroutine>();
+		team2TextCoroutines = new GameObject().AddComponent<TextCoroutine>();
 	}
 
 	void Update () {
@@ -77,54 +83,22 @@ public class ScoreBehaviour : MonoBehaviour {
 		}
 	}
 	
-	void UpdateScore(Team team, int score, bool goodChange) {
-		StopAllCoroutines();
-
+	public void UpdateScore(Team team, int score, bool goodChange) {
 		if (goodChange) {
 			AudioSource.PlayClipAtPoint(good, Vector3.zero);
 		} else {
 			AudioSource.PlayClipAtPoint(bad, Vector3.zero);
 		}
-
+		
 		GameObject teamText = null;
 		if (team == Team.TEAM1) {
 			teamText = team1Text;
 			oldTeam1Score = score;
-			teamText.transform.localScale = originalTeam1Scale;
+			team1TextCoroutines.UpdateScore(teamText, originalTeam1Scale, score);
 		} else if (team == Team.TEAM2) {
 			teamText = team2Text;
 			oldTeam2Score = score;
-			teamText.transform.localScale = originalTeam2Scale;
+			team1TextCoroutines.UpdateScore(teamText, originalTeam2Scale, score);
 		}
-
-		StartCoroutine(TweenText(teamText, score));
-	}
-
-	IEnumerator TweenText(GameObject go, int score) {
-		float t = 0;
-		Vector3 originalScale = go.transform.localScale;
-		Vector3 destScale = go.transform.localScale * 2;
-
-		// Larger
-		while(t < 1) {
-			go.transform.localScale = Vector3.Lerp(originalScale, destScale, Mathf.Pow(t, 4));
-			go.transform.Rotate(-Vector3.forward * t);
-			yield return new WaitForEndOfFrame();
-			t += Time.deltaTime*3;
-		}
-
-		go.transform.localScale = destScale;
-		go.GetComponent<TextMesh>().text = "" + score;
-
-		// Smaller
-		t = 0;
-		while (t < 1) {
-			go.transform.localScale = Vector3.Lerp(destScale, originalScale, Mathf.Pow(t, 1/4f));
-			go.transform.Rotate(Vector3.forward * t);
-			yield return new WaitForEndOfFrame();
-			t += Time.deltaTime*3;
-		}
-
-		go.transform.localScale = originalScale;
 	}
 }
