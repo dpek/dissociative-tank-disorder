@@ -6,6 +6,8 @@ public class ScoreBehaviour : MonoBehaviour {
 	public GameObject team1Text;
 	public GameObject team2Text;
 
+	public AudioClip clip;
+
 	int oldTeam1Score = 0;
 	int oldTeam2Score = 0;
 	Vector3 originalTeam1Scale;
@@ -37,21 +39,20 @@ public class ScoreBehaviour : MonoBehaviour {
 	void UpdateScore(Team team, int score) {
 		StopAllCoroutines();
 
+		AudioSource.PlayClipAtPoint(clip, Vector3.zero);
+
 		int oldScore = 0;
 		GameObject teamText = null;
 		if (team == Team.TEAM1) {
 			teamText = team1Text;
-			oldScore = oldTeam1Score;
 			oldTeam1Score = score;
 			teamText.transform.localScale = originalTeam1Scale;
 		} else if (team == Team.TEAM2) {
 			teamText = team2Text;
-			oldScore = oldTeam2Score;
 			oldTeam2Score = score;
 			teamText.transform.localScale = originalTeam2Scale;
 		}
 
-		teamText.GetComponent<TextMesh>().text = ""+oldScore;
 		StartCoroutine(TweenText(teamText, score));
 	}
 
@@ -63,6 +64,7 @@ public class ScoreBehaviour : MonoBehaviour {
 		// Larger
 		while(t < 1) {
 			go.transform.localScale = Vector3.Lerp(originalScale, destScale, Mathf.Pow(t, 4));
+			go.transform.Rotate(-Vector3.forward * t);
 			yield return new WaitForEndOfFrame();
 			t += Time.deltaTime*3;
 		}
@@ -74,7 +76,7 @@ public class ScoreBehaviour : MonoBehaviour {
 		t = 0;
 		while (t < 1) {
 			go.transform.localScale = Vector3.Lerp(destScale, originalScale, Mathf.Pow(t, 1/4f));
-			go.transform.Rotate(Vector3.left * t);
+			go.transform.Rotate(Vector3.forward * t);
 			yield return new WaitForEndOfFrame();
 			t += Time.deltaTime*3;
 		}

@@ -553,6 +553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team1Text: {fileID: 899550909}
   team2Text: {fileID: 1323039839}
+  clip: {fileID: 8300000, guid: 68461646de6944c9faaa1ee01c1f038a, type: 3}
 --- !u!1 &381991434
 GameObject:
   m_ObjectHideFlags: 0
