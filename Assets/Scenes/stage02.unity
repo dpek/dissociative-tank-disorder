@@ -82,11 +82,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 63041069}
-  - 33: {fileID: 63041074}
-  - 23: {fileID: 63041073}
   - 50: {fileID: 63041072}
   - 61: {fileID: 63041071}
   - 114: {fileID: 63041070}
+  - 212: {fileID: 63041073}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Tank2
@@ -122,6 +121,7 @@ MonoBehaviour:
   xInputName: P2X
   yInputName: P2Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &63041071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,20 +150,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &63041073
-Renderer:
+--- !u!212 &63041073
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 1660023556}
   m_GameObject: {fileID: 63041068}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -171,14 +171,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &63041074
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1660023556}
-  m_GameObject: {fileID: 63041068}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &143071576
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +399,92 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1377108024}
   m_GameObject: {fileID: 155051358}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &162004814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 162004816}
+  - 82: {fileID: 162004815}
+  m_Layer: 0
+  m_Name: 234384__pstitz__glitchy-drum-loop-w-various-bpm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &162004815
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162004814}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 3759df44f4ad14bc4bb77ea75848ae44, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &162004816
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162004814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &164594588
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +692,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &381991434
@@ -772,11 +852,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 758032110}
-  - 33: {fileID: 758032109}
-  - 23: {fileID: 758032108}
   - 50: {fileID: 758032107}
   - 61: {fileID: 758032106}
   - 114: {fileID: 758032105}
+  - 212: {fileID: 758032108}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Tank4
@@ -799,6 +878,7 @@ MonoBehaviour:
   xInputName: P4X
   yInputName: P4Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &758032106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -827,20 +907,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &758032108
-Renderer:
+--- !u!212 &758032108
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 844106300}
   m_GameObject: {fileID: 758032104}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -848,14 +928,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &758032109
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 844106300}
-  m_GameObject: {fileID: 758032104}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &758032110
 Transform:
   m_ObjectHideFlags: 0
@@ -935,7 +1009,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &844106300
@@ -1198,11 +1272,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1050586582}
-  - 33: {fileID: 1050586587}
-  - 23: {fileID: 1050586586}
   - 50: {fileID: 1050586585}
   - 61: {fileID: 1050586584}
   - 114: {fileID: 1050586583}
+  - 212: {fileID: 1050586586}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Tank1
@@ -1238,6 +1311,7 @@ MonoBehaviour:
   xInputName: P1X
   yInputName: P1Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &1050586584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1266,20 +1340,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &1050586586
-Renderer:
+--- !u!212 &1050586586
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 1407147504}
   m_GameObject: {fileID: 1050586581}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1287,14 +1361,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &1050586587
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1407147504}
-  m_GameObject: {fileID: 1050586581}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1084885402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,11 +1371,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1084885403}
-  - 33: {fileID: 1084885408}
-  - 23: {fileID: 1084885407}
   - 50: {fileID: 1084885406}
   - 61: {fileID: 1084885405}
   - 114: {fileID: 1084885404}
+  - 212: {fileID: 1084885407}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Tank3
@@ -1343,6 +1410,7 @@ MonoBehaviour:
   xInputName: P3X
   yInputName: P3Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &1084885405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1371,20 +1439,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &1084885407
-Renderer:
+--- !u!212 &1084885407
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 1627382741}
   m_GameObject: {fileID: 1084885402}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1392,14 +1460,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &1084885408
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1627382741}
-  m_GameObject: {fileID: 1084885402}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1111110747
 Prefab:
   m_ObjectHideFlags: 0
@@ -2079,7 +2141,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1773399202
@@ -2148,7 +2210,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1793625250
