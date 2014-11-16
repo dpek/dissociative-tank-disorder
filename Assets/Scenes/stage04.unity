@@ -82,11 +82,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2743321}
-  - 33: {fileID: 2743326}
-  - 23: {fileID: 2743325}
   - 50: {fileID: 2743324}
   - 61: {fileID: 2743323}
   - 114: {fileID: 2743322}
+  - 212: {fileID: 2743325}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Tank4
@@ -151,20 +150,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &2743325
-Renderer:
+--- !u!212 &2743325
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 143956838}
   m_GameObject: {fileID: 2743320}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -172,14 +171,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &2743326
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 143956838}
-  m_GameObject: {fileID: 2743320}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &11613977
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +450,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &143956838
@@ -947,7 +940,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &881310882
@@ -1016,7 +1009,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &913860838
@@ -1321,7 +1314,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07b21a7196ee24305b2fb822b8b9b68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1175948736
@@ -1485,11 +1478,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1209868641}
-  - 33: {fileID: 1209868646}
-  - 23: {fileID: 1209868645}
   - 50: {fileID: 1209868644}
   - 61: {fileID: 1209868643}
   - 114: {fileID: 1209868642}
+  - 212: {fileID: 1209868645}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Tank3
@@ -1554,20 +1546,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &1209868645
-Renderer:
+--- !u!212 &1209868645
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 1356256180}
   m_GameObject: {fileID: 1209868640}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1575,14 +1567,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &1209868646
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1356256180}
-  m_GameObject: {fileID: 1209868640}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1228963653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,11 +2054,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1719986197}
-  - 33: {fileID: 1719986196}
-  - 23: {fileID: 1719986195}
   - 50: {fileID: 1719986194}
   - 61: {fileID: 1719986193}
   - 114: {fileID: 1719986192}
+  - 212: {fileID: 1719986195}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Tank2
@@ -2124,20 +2109,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &1719986195
-Renderer:
+--- !u!212 &1719986195
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 1256654238}
   m_GameObject: {fileID: 1719986191}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2145,14 +2130,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &1719986196
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1256654238}
-  m_GameObject: {fileID: 1719986191}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1719986197
 Transform:
   m_ObjectHideFlags: 0
@@ -2540,11 +2519,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1963124382}
-  - 33: {fileID: 1963124387}
-  - 23: {fileID: 1963124386}
   - 50: {fileID: 1963124385}
   - 61: {fileID: 1963124384}
   - 114: {fileID: 1963124383}
+  - 212: {fileID: 1963124386}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Tank1
@@ -2609,20 +2587,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!23 &1963124386
-Renderer:
+--- !u!212 &1963124386
+SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
+  m_PrefabParentObject: {fileID: 21200002, guid: 39fb65503bf804ddea1ec36baa59f59f,
     type: 2}
   m_PrefabInternal: {fileID: 1750984989}
   m_GameObject: {fileID: 1963124381}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b36a25b7b35b40358348b0e9e8a24d5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2630,14 +2608,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &1963124387
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 39fb65503bf804ddea1ec36baa59f59f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1750984989}
-  m_GameObject: {fileID: 1963124381}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f414258e1e10844e296c194cecac68a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2038846863
 GameObject:
   m_ObjectHideFlags: 0
