@@ -38,7 +38,7 @@ public class Bullets : MonoBehaviour {
 		} else if (other.gameObject.tag == "Bullet") {
 			GameObject.Destroy (other.gameObject);
 			GameObject.Destroy(this.gameObject);
-		} else if (other.GetComponent<SpeedBoosts> () == null && other.gameObject.tag != "Lava" && other.gameObject.tag != "Stars") {
+		} else if (other.GetComponent<SpeedBoosts> () == null && other.gameObject.tag != "Lava" && other.gameObject.tag != "Stars"  && other.GetComponent<LaserPowerUp>() == null) {
 			Destroy(this.gameObject);
 		}
 	}
