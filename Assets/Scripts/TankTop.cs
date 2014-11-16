@@ -7,7 +7,7 @@ public class TankTop : MonoBehaviour {
 	public string shoot;
 	public Rigidbody2D shot;
 	public AudioClip shootSound;
-	public int fireTime;
+	public float fireTime;
 	float bulletSpeed = 12;
 	bool CanFire;
 	
@@ -16,6 +16,10 @@ public class TankTop : MonoBehaviour {
 		StartCoroutine (WaitForGame());
 
 		fireTime = 3;
+
+		Vector3 scale = transform.localScale;
+		scale.y *= 2;
+		transform.localScale = scale;
 	}
 
 	// Update is called once per frame
@@ -50,7 +54,7 @@ public class TankTop : MonoBehaviour {
 		StartCoroutine (laserShot (0));
 	}
 	private IEnumerator laserShot(float time){
-		fireTime = 0;
+		fireTime = 0.125f;
 		yield return new WaitForSeconds (10);
 		fireTime = 3;
 

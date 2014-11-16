@@ -15,8 +15,6 @@ public class State : MonoBehaviour {
 	public static void reset(float roundTime) {
 		team1Score = 0;
 		team2Score = 0;
-		team1RoundScore = 0;
-		team2RoundScore = 0;
 		elapsedTime = 0;
 		State.roundTime = roundTime;
 	}

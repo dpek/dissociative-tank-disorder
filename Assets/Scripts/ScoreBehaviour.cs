@@ -59,10 +59,13 @@ public class ScoreBehaviour : MonoBehaviour {
 		}
 		else if (State.team2Score > State.team1Score) {
 			str += "TEAM 2 WINS";
-			State.team2RoundScore--;
+			State.team2RoundScore++;
 		} else {
 			str += "TIED";
 		}
+		str += "\nTEAM One - " + State.team1RoundScore;
+		str += "\nTEAM Two - " + State.team2RoundScore;
+
 		go.AddComponent<TextMesh>().font = timerText.GetComponent<TextMesh>().font;
 		go.GetComponent<TextMesh>().text = str;
 		go.GetComponent<TextMesh>().alignment = TextAlignment.Center;
@@ -71,16 +74,19 @@ public class ScoreBehaviour : MonoBehaviour {
 		go.GetComponent<MeshRenderer>().material = timerText.GetComponent<TextMesh>().font.material;
 		go.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(5f);
 		State.round++;
 		if (State.round > 5) {
 			State.round = 1;
-			
-			yield return new WaitForSeconds(2f);
+			State.team1RoundScore = 0;
+			State.team2RoundScore = 0;
+
 			str = "GAME END\n";
-			str += "TEAM 1 - " + State.team1RoundScore;
-			str += " TEAM 2 - " + State.team2RoundScore;
+			str += "\nTEAM One - " + State.team1RoundScore;
+			str += "\nTEAM Two - " + State.team2RoundScore;
 			go.GetComponent<TextMesh>().text = str;
+			
+			yield return new WaitForSeconds(5f);
 
 			Application.LoadLevel ("Menu");
 		} else {
