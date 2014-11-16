@@ -32,7 +32,7 @@ public class TankTop : MonoBehaviour {
 	}
 		
 	void Fire(float time) {
-		if (CanFire) {
+		if (CanFire && this.gameObject.transform.parent.renderer.enabled ) {
 			AudioSource.PlayClipAtPoint(shootSound, Vector3.zero);
 			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *1.25f, Quaternion.Euler(0,0,0));
 			bullet.rigidbody2D.velocity = transform.up * bulletSpeed;
