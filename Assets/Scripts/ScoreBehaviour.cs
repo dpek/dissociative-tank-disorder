@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class ScoreBehaviour : MonoBehaviour {
-
 	public GameObject team1Text;
 	public GameObject team2Text;
 	public AudioClip good;

@@ -379,6 +379,7 @@ MonoBehaviour:
   yRotate: P4TopLeft
   shoot: P4Fire
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  shootSound: {fileID: 8300000, guid: e3acb1ae5e65443cfaf7872f73079b20, type: 3}
 --- !u!212 &522430454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1206,6 +1207,7 @@ MonoBehaviour:
   yRotate: P1TopLeft
   shoot: P1Fire
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  shootSound: {fileID: 8300000, guid: e3acb1ae5e65443cfaf7872f73079b20, type: 3}
 --- !u!212 &1443346799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1274,6 +1276,7 @@ MonoBehaviour:
   yRotate: P2TopLeft
   shoot: P2Fire
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  shootSound: {fileID: 8300000, guid: e3acb1ae5e65443cfaf7872f73079b20, type: 3}
 --- !u!212 &1575427292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1657,6 +1660,7 @@ MonoBehaviour:
   yRotate: P3TopLeft
   shoot: P3Fire
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  shootSound: {fileID: 8300000, guid: e3acb1ae5e65443cfaf7872f73079b20, type: 3}
 --- !u!212 &1701966617
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1781,6 +1785,18 @@ Prefab:
     - target: {fileID: 100002, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
       propertyPath: m_TagString
       value: Tank2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
+      propertyPath: xRotate
+      value: P2TopRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
+      propertyPath: yRotate
+      value: P2TopLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
+      propertyPath: shoot
+      value: P2Fire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39fb65503bf804ddea1ec36baa59f59f, type: 2}
