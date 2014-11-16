@@ -477,6 +477,7 @@ MonoBehaviour:
   xInputName: P3X
   yInputName: P3Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &621949063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -656,7 +657,7 @@ MonoBehaviour:
   bad: {fileID: 8300000, guid: 1c0a92631562a8f49a4d81bbe3076544, type: 3}
   roundTime: 60
   entry: {fileID: 740221822}
-  mode: 0
+  mode: 1
 --- !u!81 &740221817
 AudioListener:
   m_ObjectHideFlags: 0
@@ -975,6 +976,7 @@ GameObject:
   - 4: {fileID: 1009668916}
   - 212: {fileID: 1009668915}
   - 61: {fileID: 1009668914}
+  - 114: {fileID: 1009668917}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -1027,6 +1029,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2064284094}
   m_RootOrder: 0
+--- !u!114 &1009668917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009668913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d403b2c5af24637b6e675cb3c46eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
 --- !u!1 &1147838959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1121,7 @@ GameObject:
   - 4: {fileID: 1183563789}
   - 212: {fileID: 1183563791}
   - 61: {fileID: 1183563790}
+  - 114: {fileID: 1183563792}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -1159,6 +1174,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1533e399a74c43d8b59a602c82b926b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1183563792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183563788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d403b2c5af24637b6e675cb3c46eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
 --- !u!1001 &1213797744
 Prefab:
   m_ObjectHideFlags: 0
@@ -1542,6 +1569,7 @@ MonoBehaviour:
   xInputName: P4X
   yInputName: P4Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &1614480060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2075,6 +2103,7 @@ MonoBehaviour:
   xInputName: P2X
   yInputName: P2Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &2104585990
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2180,6 +2209,7 @@ MonoBehaviour:
   xInputName: P1X
   yInputName: P1Y
   shot: {fileID: 5000000, guid: 554eb3148c6ea413aa1c3019cca68065, type: 2}
+  speed: 2
 --- !u!61 &2106514596
 BoxCollider2D:
   m_ObjectHideFlags: 0
