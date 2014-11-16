@@ -6,6 +6,8 @@ public class Tank : MonoBehaviour {
 	public string yInputName;
 	public Rigidbody2D shot;
 
+	public float speed = 2f;
+
 	Vector2 mov;
 	Vector2 stored;
 	
@@ -21,6 +23,21 @@ public class Tank : MonoBehaviour {
 
 	void CheckMovement() {
 		mov.Set(Input.GetAxis(xInputName), Input.GetAxis(yInputName));
-		rigidbody2D.velocity = (mov.normalized * 2f);
+		rigidbody2D.velocity = (mov.normalized * speed);
 	}
+
+	void CallPowerUp(int i){
+		if (i == 1) {
+			StartCoroutine (BoostSpeed());
+		} else if (i == 2) {
+		
+		}
+	}
+
+
+	IEnumerator BoostSpeed(){
+		speed = 8;
+		yield return new WaitForSeconds (3);
+		speed = 2f;
+		}
 }
