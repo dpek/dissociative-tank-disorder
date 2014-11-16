@@ -63,8 +63,8 @@ public class ScoreBehaviour : MonoBehaviour {
 		} else {
 			str += "TIED";
 		}
-		str += "\nTEAM One - " + State.team1RoundScore;
-		str += "\nTEAM Two - " + State.team2RoundScore;
+		str += "\nSCORE: " + State.team1RoundScore;
+		str += " - " + State.team2RoundScore;
 
 		go.AddComponent<TextMesh>().font = timerText.GetComponent<TextMesh>().font;
 		go.GetComponent<TextMesh>().text = str;
@@ -81,9 +81,9 @@ public class ScoreBehaviour : MonoBehaviour {
 			State.team1RoundScore = 0;
 			State.team2RoundScore = 0;
 
-			str = "GAME END\n";
-			str += "\nTEAM One - " + State.team1RoundScore;
-			str += "\nTEAM Two - " + State.team2RoundScore;
+			str = "GAME END";
+			str += "\nSCORE: " + State.team1RoundScore;
+			str += " - " + State.team2RoundScore;
 			go.GetComponent<TextMesh>().text = str;
 			
 			yield return new WaitForSeconds(5f);
