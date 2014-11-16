@@ -44,7 +44,7 @@ public class Entry : MonoBehaviour
 	public Sprite panzerNum10;
 
 	private bool played30Sec = false;
-	private bool played10Sec = false;
+//	private bool played10Sec = false;
 	private bool played5Sec = false;
 	private bool played4Sec = false;
 	private bool played3Sec = false;
@@ -85,7 +85,6 @@ public class Entry : MonoBehaviour
 			AudioSource.PlayClipAtPoint(clip1Sec, Vector3.zero);
 			played1Sec = true;
 		}
-
 	}
 
 	public IEnumerator DoIntro(Mode mode, int round)

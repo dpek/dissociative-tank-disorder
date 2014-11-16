@@ -11,6 +11,8 @@ public class ScoreBehaviour : MonoBehaviour {
 	public Entry entry;
 	public Entry.Mode mode;
 
+	bool ending = false;
+
 	int oldTeam1Score = 0;
 	int oldTeam2Score = 0;
 	Vector3 originalTeam1Scale;
@@ -33,19 +35,43 @@ public class ScoreBehaviour : MonoBehaviour {
 			UpdateScore(Team.TEAM2, State.team2Score, State.team2Score > oldTeam2Score);
 		}
 		State.elapsedTime += Time.deltaTime;
-		if (State.elapsedTime > State.roundTime) {
-			State.round++;
-			if (State.round > 10) {
-				State.round = 1;
-				Application.LoadLevel("Menu");
-
-			} else {
-				int number = Random.Range (1, 5);
-				Application.LoadLevel("Stage0" + number);
-			}
+		if (State.elapsedTime > State.roundTime && !ending) {
+			ending = true;
+			StartCoroutine(NextRound());
 		}
 
-		timerText.GetComponent<TextMesh> ().text = "" + ((int)(State.roundTime - State.elapsedTime));
+		timerText.GetComponent<TextMesh> ().text = "" + Mathf.Max (0,((int)(State.roundTime - State.elapsedTime)));
+	}
+
+	IEnumerator NextRound() {
+		ending = true;
+		GameObject go = new GameObject("GAME END");
+		string str = "GAME END\n";
+		if(State.team1Score > State.team2Score) {
+			str += "TEAM 1 WINS";
+		}
+		else if (State.team2Score > State.team1Score) {
+			str += "TEAM 2 WINS";
+		} else {
+			str += "TIED";
+		}
+		go.AddComponent<TextMesh>().font = timerText.GetComponent<TextMesh>().font;
+		go.GetComponent<TextMesh>().text = str;
+		go.GetComponent<TextMesh>().alignment = TextAlignment.Center;
+		go.GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;
+		go.GetComponent<TextMesh>().fontSize = 400;
+		go.GetComponent<MeshRenderer>().material = timerText.GetComponent<TextMesh>().font.material;
+		go.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+		yield return new WaitForSeconds(2f);
+		State.round++;
+		if (State.round > 10) {
+			State.round = 1;
+			Application.LoadLevel("Menu");
+		} else {
+			int number = Random.Range (1, 5);
+			Application.LoadLevel("Stage0" + number);
+		}
 	}
 
 	void UpdateScore(Team team, int score, bool goodChange) {
