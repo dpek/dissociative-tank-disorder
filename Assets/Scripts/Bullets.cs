@@ -37,7 +37,8 @@ public class Bullets : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(explode, Vector3.zero);
 		} else if (other.gameObject.tag == "Bullet") {
 			GameObject.Destroy (other.gameObject);
-		} else if (other.GetComponent<SpeedBoosts> () == null && other.gameObject.tag != "Lava") {
+			GameObject.Destroy(this.gameObject);
+		} else if (other.GetComponent<SpeedBoosts> () == null && other.gameObject.tag != "Lava" && other.gameObject.tag != "Stars") {
 			Destroy(this.gameObject);
 		}
 	}

@@ -8,6 +8,7 @@ TagManager:
   - Tank3
   - Tank4
   - Lava
+  - Stars
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
