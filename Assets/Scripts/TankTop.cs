@@ -7,19 +7,20 @@ public class TankTop : MonoBehaviour {
 	public string shoot;
 	public Rigidbody2D shot;
 	public AudioClip shootSound;
-
+	public int fireTime;
 	float bulletSpeed = 12;
 	bool CanFire;
 	
 	// Use this for initialization
 	void Start () {
+		fireTime = 3;
 		CanFire = true;
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetButtonDown (shoot)) {
-			Fire ();
+		if (Input.GetButton(shoot)) {
+			Fire (fireTime);
 		}
 		float input = 0;
 		if (Input.GetButton (xRotate)) {
@@ -30,7 +31,7 @@ public class TankTop : MonoBehaviour {
 		transform.Rotate (Vector3.forward, 180f * input * Time.deltaTime);
 	}
 		
-	void Fire() {
+	void Fire(float time) {
 		if (CanFire) {
 			AudioSource.PlayClipAtPoint(shootSound, Vector3.zero);
 			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *1.25f, Quaternion.Euler(0,0,0));
@@ -41,11 +42,21 @@ public class TankTop : MonoBehaviour {
 				bullet.gameObject.GetComponent<Bullets>().source = Team.TEAM2;
 			}
 			CanFire = false;
-			StartCoroutine(ShotsFired());
+			StartCoroutine(ShotsFired(time));
 		}
 	}
-	IEnumerator ShotsFired() {
-		yield return new WaitForSeconds(3);
+	public void LaserSpeed(){
+		StartCoroutine (laserShot (0));
+	}
+	private IEnumerator laserShot(float time){
+		fireTime = 0;
+		yield return new WaitForSeconds (2);
+		fireTime = 3;
+
+	}
+	IEnumerator ShotsFired(float time) {
+		yield return new WaitForSeconds(time);
 		CanFire = true;
 	}
+
 }
