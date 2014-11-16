@@ -36,7 +36,9 @@ public class Tank : MonoBehaviour {
 	}
 
 	public void BoostSpeed() {
-			StartCoroutine (BoostSpeedCoroutine());
+		if(renderer.enabled)
+			StopAllCoroutines();
+		StartCoroutine (BoostSpeedCoroutine());
 	}
 
 	private IEnumerator BoostSpeedCoroutine(){
