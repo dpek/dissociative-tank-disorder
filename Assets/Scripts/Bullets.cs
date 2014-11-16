@@ -20,13 +20,13 @@ public class Bullets : MonoBehaviour {
 			if(source == Team.TEAM1 ) {
 				State.team1Score--;
 			} else {
-				State.team1Score++;
+				State.team2Score++;
 			}
 		} else if(other.gameObject.tag == "Tank3" || other.gameObject.tag == "Tank4") {
 			if(source == Team.TEAM2){
 				State.team2Score--;
 			} else {
-				State.team2Score++;
+				State.team1Score++;
 			}
 
 		} else if(other.gameObject.tag == "Bullet"){

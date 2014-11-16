@@ -25,8 +25,6 @@ public class TankTop : MonoBehaviour {
 			input = -1;
 		} else if (Input.GetButton (yRotate)) {
 			input = 1;
-		} else {
-			input = 0;
 		}
 		transform.Rotate (Vector3.forward, 180f * input * Time.deltaTime);
 	}
@@ -36,7 +34,7 @@ public class TankTop : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(shootSound, Vector3.zero);
 			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *.75f, Quaternion.Euler(0,0,0));
 			bullet.rigidbody2D.velocity = transform.up * 10;
-			if(this.gameObject.transform.parent.gameObject.tag == "Tank1" || this.gameObject.transform.parent.gameObject.tag == "Tank2") {
+			if (this.gameObject.transform.parent.gameObject.tag == "Tank1" || this.gameObject.transform.parent.gameObject.tag == "Tank2") {
 				bullet.gameObject.GetComponent<Bullets>().source = Team.TEAM1; 
 			} else {
 				bullet.gameObject.GetComponent<Bullets>().source = Team.TEAM2;

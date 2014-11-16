@@ -21,6 +21,6 @@ public class Tank : MonoBehaviour {
 
 	void CheckMovement() {
 		mov.Set(Input.GetAxis(xInputName), Input.GetAxis(yInputName));
-		rigidbody2D.velocity = (mov.normalized * .5f);
+		rigidbody2D.velocity = (mov.normalized * 1f);
 	}
 }
