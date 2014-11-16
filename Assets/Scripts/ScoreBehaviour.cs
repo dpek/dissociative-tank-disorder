@@ -5,17 +5,12 @@ public class ScoreBehaviour : MonoBehaviour {
 
 	public GameObject team1Text;
 	public GameObject team2Text;
-
 	public AudioClip clip;
 
 	int oldTeam1Score = 0;
 	int oldTeam2Score = 0;
 	Vector3 originalTeam1Scale;
 	Vector3 originalTeam2Scale;
-	
-	public enum Team{
-		TEAM1, TEAM2
-	}
 
 	void Start () {
 		State.resetScore();

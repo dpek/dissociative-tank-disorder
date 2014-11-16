@@ -10,12 +10,4 @@ public class State : MonoBehaviour {
 		team1Score = 0;
 		team2Score = 0;
 	}
-
-	public static void setScore(ScoreBehaviour.Team team) {
-		if (team == ScoreBehaviour.Team.TEAM1) {
-			team1Score++;
-		} else if (team == ScoreBehaviour.Team.TEAM2) {
-			team2Score++;
-		}
-	}
 }

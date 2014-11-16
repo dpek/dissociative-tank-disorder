@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - 
+  - Tank1
+  - Tank2
+  - Tank3
+  - Tank4
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast

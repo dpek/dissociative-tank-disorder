@@ -4,9 +4,11 @@ using System.Collections;
 public class Tank : MonoBehaviour {
 	public string xInputName;
 	public string yInputName;
+	public Rigidbody2D shot;
+
 	Vector2 mov;
 	Vector2 stored;
-	public Rigidbody2D shot;
+	
 	// Use this for initialization
 	void Start () {
 		mov = new Vector2(0,0);
@@ -17,12 +19,8 @@ public class Tank : MonoBehaviour {
 		CheckMovement ();
 	}
 
-	void CheckMovement(){
-		mov.Set(Input.GetAxis(xInputName),Input.GetAxis(yInputName));
+	void CheckMovement() {
+		mov.Set(Input.GetAxis(xInputName), Input.GetAxis(yInputName));
 		rigidbody2D.velocity = (mov.normalized * .5f);
-
-	
 	}
-
-	
 }
