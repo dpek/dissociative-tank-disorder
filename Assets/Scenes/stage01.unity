@@ -644,6 +644,13 @@ MonoBehaviour:
   clipPanzer10: {fileID: 8300000, guid: f9ba2380c44b34f4289cadfac4662996, type: 3}
   clipReady: {fileID: 8300000, guid: a9eb63394b485e34e8b6e0e1a4b62a30, type: 3}
   clipFight: {fileID: 8300000, guid: 2e48e01d5004aa04dbae1a510991668c, type: 3}
+  clip30Sec: {fileID: 8300000, guid: 97122af51c1a95948b3ae442650336fe, type: 3}
+  clip10Sec: {fileID: 0}
+  clip5Sec: {fileID: 8300000, guid: 266620383d5179c478ea2509edd452cb, type: 3}
+  clip4Sec: {fileID: 8300000, guid: cdf63ef653157794dac2b963859e6154, type: 3}
+  clip3Sec: {fileID: 8300000, guid: 33e56a0193973754bbfc3d3d44b06f13, type: 3}
+  clip2Sec: {fileID: 8300000, guid: a673f3818ed149f4e90b1071b235e41d, type: 3}
+  clip1Sec: {fileID: 8300000, guid: a5d0148da517c4b49bfe5814ecc98bd7, type: 3}
   modeDeathmatch: {fileID: 21300000, guid: 37c67e4100f8fac41881b066709da182, type: 3}
   modeSteamroll: {fileID: 21300000, guid: 13602c2269cbfce43a5ddc7a919ce76f, type: 3}
   panzerTankLeft: {fileID: 21300000, guid: c79725f7fc24c4345a85432de6b76613, type: 3}
