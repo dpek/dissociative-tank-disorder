@@ -20,9 +20,9 @@ public class TankTop : MonoBehaviour {
 			Fire ();
 		}
 		float input = 0;
-		if (Input.GetButton (yRotate)) {
+		if (Input.GetButton (xRotate)) {
 			input = -1;
-		} else if (Input.GetButton (xRotate)) {
+		} else if (Input.GetButton (yRotate)) {
 			input = 1;
 		} else {
 			input = 0;
