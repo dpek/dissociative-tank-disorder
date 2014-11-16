@@ -17,28 +17,27 @@ public class Bullets : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Tank1" || other.gameObject.tag == "Tank2") {
-			if(source == Team.TEAM1 ) {
-				State.team1Score--;
+			if (source == Team.TEAM1) {
+					State.team1Score--;
 			} else {
-				State.team2Score++;
+					State.team2Score++;
 			}
-			other.GetComponent<Tank>().Respawn(5);
+			other.GetComponent<Tank> ().Respawn (5);
 
-			GameObject.Destroy(this.gameObject);
-		} else if(other.gameObject.tag == "Tank3" || other.gameObject.tag == "Tank4") {
-			if(source == Team.TEAM2){
+			GameObject.Destroy (this.gameObject);
+		} else if (other.gameObject.tag == "Tank3" || other.gameObject.tag == "Tank4") {
+			if (source == Team.TEAM2) {
 				State.team2Score--;
 			} else {
 				State.team1Score++;
 			}
-			other.GetComponent<Tank>().Respawn(5);
+			other.GetComponent<Tank> ().Respawn (5);
 
-			GameObject.Destroy(this.gameObject);
-
-		} else if(other.gameObject.tag == "Bullet"){
+			GameObject.Destroy (this.gameObject);
+		} else if (other.gameObject.tag == "Bullet") {
 			GameObject.Destroy (other.gameObject);
+		} else if (other.GetComponent<SpeedBoosts> () == null && other.gameObject.tag != "Lava") {
+			Destroy(this.gameObject);
 		}
-		
-
 	}
 }
