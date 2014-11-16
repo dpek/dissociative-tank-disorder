@@ -8,6 +8,7 @@ public class TankTop : MonoBehaviour {
 	public Rigidbody2D shot;
 	public AudioClip shootSound;
 
+	float bulletSpeed = 12;
 	bool CanFire;
 	
 	// Use this for initialization
@@ -32,8 +33,8 @@ public class TankTop : MonoBehaviour {
 	void Fire() {
 		if (CanFire) {
 			AudioSource.PlayClipAtPoint(shootSound, Vector3.zero);
-			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *.75f, Quaternion.Euler(0,0,0));
-			bullet.rigidbody2D.velocity = transform.up * 10;
+			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *1.25f, Quaternion.Euler(0,0,0));
+			bullet.rigidbody2D.velocity = transform.up * bulletSpeed;
 			if (this.gameObject.transform.parent.gameObject.tag == "Tank1" || this.gameObject.transform.parent.gameObject.tag == "Tank2") {
 				bullet.gameObject.GetComponent<Bullets>().source = Team.TEAM1; 
 			} else {

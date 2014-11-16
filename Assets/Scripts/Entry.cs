@@ -18,6 +18,13 @@ public class Entry : MonoBehaviour
 	public AudioClip clipPanzer10;
 	public AudioClip clipReady;
 	public AudioClip clipFight;
+	public AudioClip clip30Sec;
+	public AudioClip clip10Sec;
+	public AudioClip clip5Sec;
+	public AudioClip clip4Sec;
+	public AudioClip clip3Sec;
+	public AudioClip clip2Sec;
+	public AudioClip clip1Sec;
 
 	public Sprite modeDeathmatch;
 	public Sprite modeSteamroll;
@@ -36,9 +43,49 @@ public class Entry : MonoBehaviour
 	public Sprite panzerNum9;
 	public Sprite panzerNum10;
 
+	private bool played30Sec = false;
+	private bool played10Sec = false;
+	private bool played5Sec = false;
+	private bool played4Sec = false;
+	private bool played3Sec = false;
+	private bool played2Sec = false;
+	private bool played1Sec = false;
+
 	public enum Mode
 	{
 		DEATHMATCH, STEAMROLL
+	}
+
+	public void Update() {
+		if (State.elapsedTime > State.roundTime - 30 && !played30Sec) {
+			AudioSource.PlayClipAtPoint(clip30Sec, Vector3.zero);
+			played30Sec = true;
+		}
+//		if (State.elapsedTime > State.roundTime - 10 && !played10Sec) {
+//			AudioSource.PlayClipAtPoint(clip10Sec, Vector3.zero);
+//			played10Sec = true;
+//		}
+		if (State.elapsedTime > State.roundTime - 5 && !played5Sec) {
+			AudioSource.PlayClipAtPoint(clip5Sec, Vector3.zero);
+			played5Sec = true;
+		}
+		if (State.elapsedTime > State.roundTime - 4 && !played4Sec) {
+			AudioSource.PlayClipAtPoint(clip4Sec, Vector3.zero);
+			played4Sec = true;
+		}
+		if (State.elapsedTime > State.roundTime - 3 && !played3Sec) {
+			AudioSource.PlayClipAtPoint(clip3Sec, Vector3.zero);
+			played3Sec = true;
+		}
+		if (State.elapsedTime > State.roundTime - 2 && !played2Sec) {
+			AudioSource.PlayClipAtPoint(clip2Sec, Vector3.zero);
+			played2Sec = true;
+		}
+		if (State.elapsedTime > State.roundTime - 1 && !played1Sec) {
+			AudioSource.PlayClipAtPoint(clip1Sec, Vector3.zero);
+			played1Sec = true;
+		}
+
 	}
 
 	public IEnumerator DoIntro(Mode mode, int round)
