@@ -10,7 +10,7 @@ public class CameraShake : MonoBehaviour {
 	public float autoTime = 2;
 
 	public float speed = 0.1f;
-	private float dist = 0.4f;
+	public float dist = 0.4f;
 
 	void Start () {
 		targetPos = transform.localPosition;
