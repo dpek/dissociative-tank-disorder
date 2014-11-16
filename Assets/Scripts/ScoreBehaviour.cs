@@ -51,13 +51,15 @@ public class ScoreBehaviour : MonoBehaviour {
 
 	IEnumerator NextRound() {
 		ending = true;
-		GameObject go = new GameObject("GAME END");
-		string str = "GAME END\n";
+		GameObject go = new GameObject("ROUND END");
+		string str = "ROUND END\n";
 		if(State.team1Score > State.team2Score) {
 			str += "TEAM 1 WINS";
+			State.team1RoundScore++;
 		}
 		else if (State.team2Score > State.team1Score) {
 			str += "TEAM 2 WINS";
+			State.team2RoundScore--;
 		} else {
 			str += "TIED";
 		}
@@ -73,6 +75,13 @@ public class ScoreBehaviour : MonoBehaviour {
 		State.round++;
 		if (State.round > 5) {
 			State.round = 1;
+			
+			yield return new WaitForSeconds(2f);
+			str = "GAME END\n";
+			str += "TEAM 1 - " + State.team1RoundScore;
+			str += " TEAM 2 - " + State.team2RoundScore;
+			go.GetComponent<TextMesh>().text = str;
+
 			Application.LoadLevel ("Menu");
 		} else {
 			State.Stage++;
