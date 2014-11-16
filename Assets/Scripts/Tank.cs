@@ -15,6 +15,14 @@ public class Tank : MonoBehaviour {
 	void Start () {
 		spawnLocation = transform.position;
 		mov = new Vector2(0,0);
+
+		if(xInputName.StartsWith("P1") || xInputName.StartsWith("P2")) {
+			this.GetComponent<SpriteRenderer>().color = Color.cyan;
+			this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.cyan;
+		} else {
+			this.GetComponent<SpriteRenderer>().color = Color.red;
+			this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
+		}
 	}
 	
 	// Update is called once per frame
