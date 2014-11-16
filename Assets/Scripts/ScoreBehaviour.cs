@@ -7,7 +7,7 @@ public class ScoreBehaviour : MonoBehaviour {
 	public GameObject timerText;
 	public AudioClip good;
 	public AudioClip bad;
-	public float roundTime = 60;
+	private float roundTime = 65;
 	public Entry entry;
 	public Entry.Mode mode;
 
