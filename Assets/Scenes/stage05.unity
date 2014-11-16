@@ -5178,6 +5178,76 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 89cf1d0b6aea748caa5fed2475fd04e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1049045874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1049045877}
+  - 23: {fileID: 1049045876}
+  - 102: {fileID: 1049045875}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &1049045875
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049045874}
+  m_Text: 0
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 200
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: dcab03b99a1db4c3a9b44e980f48e6d6, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1049045876
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049045874}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: dcab03b99a1db4c3a9b44e980f48e6d6, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!4 &1049045877
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049045874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -14, z: 10}
+  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1861649416}
+  m_RootOrder: 2
 --- !u!1001 &1067833932
 Prefab:
   m_ObjectHideFlags: 0
@@ -8910,6 +8980,7 @@ GameObject:
   - 124: {fileID: 1861649419}
   - 81: {fileID: 1861649418}
   - 114: {fileID: 1861649417}
+  - 114: {fileID: 1861649422}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8929,6 +9000,7 @@ Transform:
   m_Children:
   - {fileID: 192373505}
   - {fileID: 1339041173}
+  - {fileID: 1049045877}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1861649417
@@ -8944,8 +9016,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team1Text: {fileID: 192373502}
   team2Text: {fileID: 1339041172}
+  timerText: {fileID: 1049045874}
   good: {fileID: 8300000, guid: 68461646de6944c9faaa1ee01c1f038a, type: 3}
   bad: {fileID: 8300000, guid: 1c0a92631562a8f49a4d81bbe3076544, type: 3}
+  roundTime: 60
+  entry: {fileID: 1861649422}
+  mode: 0
 --- !u!81 &1861649418
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8999,6 +9075,46 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!114 &1861649422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861649415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30853ef390aabe545949f4be4bd51384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipDeathmatch: {fileID: 8300000, guid: 84031e916983c4941a4fbae7aacacb53, type: 3}
+  clipSteamroll: {fileID: 8300000, guid: 034f6736958a158409f976336e2b237e, type: 3}
+  clipPanzer1: {fileID: 8300000, guid: 6d54bdb0a56068d42a9ea92e104db74b, type: 3}
+  clipPanzer2: {fileID: 8300000, guid: e7e6423021ca7fe4ba3c4cff99333f93, type: 3}
+  clipPanzer3: {fileID: 8300000, guid: d6e9136befeaf90449b15b68dc4f5914, type: 3}
+  clipPanzer4: {fileID: 8300000, guid: d9e592eb84aabc9468361e3f97382277, type: 3}
+  clipPanzer5: {fileID: 8300000, guid: 135ec3980e2e4f84b835f39b22b9b07c, type: 3}
+  clipPanzer6: {fileID: 8300000, guid: fdedc2605e2f8e748803b6757934f94c, type: 3}
+  clipPanzer7: {fileID: 8300000, guid: 4a610b0678af845428214213ea715c6a, type: 3}
+  clipPanzer8: {fileID: 8300000, guid: 221117344c5530946918cd0f9f94dee7, type: 3}
+  clipPanzer9: {fileID: 8300000, guid: 0e3ac42002cfea24c908300414fe8c96, type: 3}
+  clipPanzer10: {fileID: 8300000, guid: f9ba2380c44b34f4289cadfac4662996, type: 3}
+  clipReady: {fileID: 8300000, guid: a9eb63394b485e34e8b6e0e1a4b62a30, type: 3}
+  clipFight: {fileID: 8300000, guid: 2e48e01d5004aa04dbae1a510991668c, type: 3}
+  modeDeathmatch: {fileID: 21300000, guid: 37c67e4100f8fac41881b066709da182, type: 3}
+  modeSteamroll: {fileID: 21300000, guid: 13602c2269cbfce43a5ddc7a919ce76f, type: 3}
+  panzerTankLeft: {fileID: 21300000, guid: c79725f7fc24c4345a85432de6b76613, type: 3}
+  panzerTankRight: {fileID: 21300000, guid: 0aa7c701181857b43a245dfa41330e32, type: 3}
+  panzerText: {fileID: 21300000, guid: 8cb8966f4865cb64081a6f11570711cf, type: 3}
+  panzerNum1: {fileID: 21300000, guid: c01ab7b803415d746b4edc64ad0bfd6f, type: 3}
+  panzerNum2: {fileID: 21300000, guid: e48cdcd5f5baaf548bf1ef183d07ec12, type: 3}
+  panzerNum3: {fileID: 21300000, guid: a6f402851183f8a42b4d4dea38b4f214, type: 3}
+  panzerNum4: {fileID: 21300000, guid: e3d863552a414004b8dc91f785d7c666, type: 3}
+  panzerNum5: {fileID: 21300000, guid: e74da841ae89f18409d4aa96aa850032, type: 3}
+  panzerNum6: {fileID: 21300000, guid: 226357c83bd424e4292ff2353e7b1a4f, type: 3}
+  panzerNum7: {fileID: 21300000, guid: 34db0f0c13fca6046bfd5b639065d83d, type: 3}
+  panzerNum8: {fileID: 21300000, guid: 1b199169382d4c4429419d55c2fcd565, type: 3}
+  panzerNum9: {fileID: 21300000, guid: 846ceb03eed126347a24d3dca357237e, type: 3}
+  panzerNum10: {fileID: 21300000, guid: d8e4804dda195854b9abfafc99da4bc2, type: 3}
 --- !u!1 &1869374330
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,11 +41,7 @@ public class Entry : MonoBehaviour
 		DEATHMATCH, STEAMROLL
 	}
 
-	void Start() {
-		StartCoroutine(DoIntro(Mode.STEAMROLL, 3));
-	}
-
-	IEnumerator DoIntro(Mode mode, int round)
+	public IEnumerator DoIntro(Mode mode, int round)
 	{
 		float t = 0;
 		float zoomPower = 4;

@@ -4,8 +4,12 @@ using System.Collections;
 public class ScoreBehaviour : MonoBehaviour {
 	public GameObject team1Text;
 	public GameObject team2Text;
+	public GameObject timerText;
 	public AudioClip good;
 	public AudioClip bad;
+	public float roundTime = 60;
+	public Entry entry;
+	public Entry.Mode mode;
 
 	int oldTeam1Score = 0;
 	int oldTeam2Score = 0;
@@ -13,11 +17,12 @@ public class ScoreBehaviour : MonoBehaviour {
 	Vector3 originalTeam2Scale;
 
 	void Start () {
-		State.resetScore();
+		State.reset(roundTime);
 		oldTeam1Score = 0;
 		oldTeam2Score = 0;
 		originalTeam1Scale = team1Text.transform.localScale;
 		originalTeam2Scale = team2Text.transform.localScale;
+		StartCoroutine(entry.DoIntro (mode, State.round));
 	}
 
 	void Update () {
@@ -27,6 +32,20 @@ public class ScoreBehaviour : MonoBehaviour {
 		if (State.team2Score != oldTeam2Score) {
 			UpdateScore(Team.TEAM2, State.team2Score, State.team2Score > oldTeam2Score);
 		}
+		State.elapsedTime += Time.deltaTime;
+		if (State.elapsedTime > State.roundTime) {
+			State.round++;
+			if (State.round > 10) {
+				State.round = 1;
+				Application.LoadLevel("Menu");
+
+			} else {
+				int number = Random.Range (1, 5);
+				Application.LoadLevel("Stage0" + number);
+			}
+		}
+
+		timerText.GetComponent<TextMesh> ().text = "" + ((int)(State.roundTime - State.elapsedTime));
 	}
 
 	void UpdateScore(Team team, int score, bool goodChange) {
