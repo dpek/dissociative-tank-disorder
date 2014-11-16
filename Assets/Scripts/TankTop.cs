@@ -20,9 +20,9 @@ public class TankTop : MonoBehaviour {
 			Fire ();
 		}
 		float input = 0;
-		if (Input.GetButton (xRotate)) {
+		if (Input.GetButton (yRotate)) {
 			input = -1;
-		} else if (Input.GetButton (yRotate)) {
+		} else if (Input.GetButton (xRotate)) {
 			input = 1;
 		} else {
 			input = 0;
@@ -32,7 +32,7 @@ public class TankTop : MonoBehaviour {
 		
 	void Fire() {
 		if (CanFire) {
-			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *.60f, Quaternion.Euler(0,0,0));
+			Rigidbody2D bullet = (Rigidbody2D)Instantiate (shot, transform.position + transform.up *.75f, Quaternion.Euler(0,0,0));
 			bullet.rigidbody2D.velocity = transform.up * 10;
 			if(this.gameObject.transform.parent.gameObject.tag == "Tank1" || this.gameObject.transform.parent.gameObject.tag == "Tank2") {
 				bullet.gameObject.GetComponent<Bullets>().source = Team.TEAM1; 
