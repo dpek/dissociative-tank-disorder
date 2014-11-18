@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 6b9b88dd0ad714d75b252c15502d67da
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - team1Text: {instanceID: 0}
+  - team2Text: {instanceID: 0}
+  - good: {fileID: 8300000, guid: 68461646de6944c9faaa1ee01c1f038a, type: 3}
+  - bad: {fileID: 8300000, guid: 1c0a92631562a8f49a4d81bbe3076544, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
